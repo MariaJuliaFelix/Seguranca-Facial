@@ -1004,9 +1004,13 @@ body.dark-mode .typing-dot { background-color: #b0c4de; }
     to { opacity: 1; }
 }
 .success-icon {
-    width: 80px; height: 80px; border-radius: 50%;
-    display: block; stroke-width: 2; stroke: #28a745;
-    stroke-miterlimit: 10; margin: 0 auto;
+    width: 80px; height: 80px; 
+    border-radius: 50%;
+    display: block; 
+    stroke-width: 2; 
+    stroke: #28a745;
+    stroke-miterlimit: 10; 
+    margin: 0 auto;
     box-shadow: inset 0px 0px 0px #28a745;
     animation: success-fill .4s ease-in-out .4s forwards, success-scale .3s ease-in-out .9s both;
 }

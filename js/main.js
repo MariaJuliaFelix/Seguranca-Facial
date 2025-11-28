@@ -1,30 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 0. INICIALIZAR ANIMAÇÕES DE SCROLL (AOS) ---
     AOS.init({
-        duration: 800,  // Duração da animação em ms
-        once: true,     // Animação acontece apenas uma vez
-        offset: 100,    // Começa a animar 100px antes do elemento aparecer
+        duration: 800, 
+        once: true,    
+        offset: 100,   
     });
 
 
-    // --- 1. CÓDIGO DO HEADER (SCROLL + HIDE/SHOW) ---
     const header = document.querySelector('header');
     const videoContainer = document.querySelector('.video-container');
     let lastScrollY = window.scrollY; 
 
-    // Função que controla o header
     const handleHeaderScroll = () => {
         const currentScrollY = window.scrollY;
 
-        // Lógica de fundo (scrolled)
         if (currentScrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
 
-        // Lógica de esconder/mostrar
         if (currentScrollY > lastScrollY && currentScrollY > 100) { 
             header.classList.add('header-hidden');
         } else { 
@@ -33,23 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
     };
 
-    // VERIFICA EM QUAL PÁGINA ESTAMOS
-    // Se não tiver o vídeo-container (ex: pág. saiba-mais.html),
-    // o header já começa com fundo branco e não esconde/mostra.
     if (videoContainer) {
-        // Estamos na Home Page, ativar a lógica de scroll completa
         window.addEventListener('scroll', handleHeaderScroll);
     } else {
-        // Estamos em uma página interna
-        // Adiciona 'scrolled' imediatamente (se já não for 'sub-page-header')
         if (!header.classList.contains('sub-page-header')) {
             header.classList.add('scrolled');
         }
-        // Não adiciona o evento de 'header-hidden'
     }
 
 
-    // --- 2. CÓDIGO DO MODO NOTURNO ---
     const trilho = document.getElementById('trilho');
     const body = document.body;
     const aplicarTemaSalvo = () => {
@@ -75,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 3. CÓDIGO DO MENU HAMBÚRGUER (MOBILE) ---
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('mobile-nav-toggle');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -87,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.toggle('mobile-nav-active');
         });
     }
-    // Fecha o menu ao clicar em um link (para SPAs)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (body.classList.contains('mobile-nav-active')) {
@@ -99,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 4. CÓDIGO DO FAQ (ACORDEÃO) ---
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
@@ -125,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     
-    // --- 5. CÓDIGO DO CHATBOT (Funcional) ---
     const chatWindow = document.getElementById('chat-window');
     const chatbotToggle = document.getElementById('chatbot-toggle');
     const chatForm = document.getElementById('chat-form');
@@ -226,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // --- 6. CÓDIGO DO NOVO MODAL (AGENDAR DEMO) ---
     const modalOverlay = document.getElementById('modal-overlay');
     const modalFechar = document.getElementById('modal-fechar');
     const btnsAbrirModal = document.querySelectorAll('.open-demo-modal');
@@ -235,21 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const successMessage = document.getElementById('success-message');
     const btnFinalizar = demoForm.querySelector('.btn-finalizar');
 
-    // Abrir o Modal
     btnsAbrirModal.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            // Reseta o modal para o estado inicial
+           
             demoForm.style.display = 'block';
             successMessage.style.display = 'none';
             btnFinalizar.classList.remove('loading');
-            demoForm.reset(); // Limpa o formulário
+            demoForm.reset(); 
 
             modalOverlay.classList.add('active');
         });
     });
 
-    // Fechar o Modal
     const fecharModal = () => {
         modalOverlay.classList.remove('active');
     };
@@ -260,28 +240,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Simulação de Envio do Formulário de Demo
     demoForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Validação simples (HTML5 'required' já cuida disso, mas é uma boa prática)
         if (!demoForm.checkValidity()) {
             demoForm.reportValidity();
             return;
         }
         
-        // 1. Mostrar loading no botão
         btnFinalizar.classList.add('loading');
         
-        // 2. Simular envio (2 segundos)
         setTimeout(() => {
-            // 3. Esconder formulário e mostrar sucesso
             demoForm.style.display = 'none';
             successMessage.style.display = 'block';
 
-            // 4. Simular visualização do sucesso (3 segundos)
             setTimeout(() => {
-                // 5. Fechar o modal
                 fecharModal();
             }, 3000);
 
