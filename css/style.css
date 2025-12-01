@@ -14,6 +14,22 @@
     --fonte-principal: 'Poppins', sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+.video-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;        
+  display: block;
+  object-fit: cover;
+}
 
 body.dark-mode {
     --cor-fundo: #0a192f;
