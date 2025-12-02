@@ -1,0 +1,119 @@
+body {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    color: #3c4043;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+h1, h2, h3 {
+    color: #202124;
+    font-weight: 500;
+}
+hr {
+    border: none;
+    border-top: 1px solid #dadce0;
+    margin: 25px 0;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px 40px;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.main-content header {
+    margin-bottom: 30px;
+}
+.main-content header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 400;
+    color: #202124;
+}
+
+
+.btn-theme-toggle { 
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1001;
+    width: 60px;
+    height: 28px;
+    background-color: #fdfdfd;
+    border: 1px solid #dadce0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 3px;
+    box-sizing: border-box;
+}
+.bolaa {
+    width: 22px;
+    height: 22px;
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+.btn-theme-toggle.active .bolaa {
+    left: 30px;
+}
+
+
+.status-message { 
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.success { 
+    color: #1e8e3e;
+    background-color: rgba(30, 142, 62, 0.1);
+    border-color: rgba(30, 142, 62, 0.2);
+}
+.error { 
+    color: #d93025;
+    background-color: rgba(217, 48, 37, 0.1);
+    border-color: rgba(217, 48, 37, 0.2);
+}
+
+
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #c0c0c0;
+}
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #e0e0e0;
+}
+body.dark-mode hr {
+    border-top: 1px solid #2b394f;
+}
+body.dark-mode .main-content header h1 {
+    color: #e0e0e0;
+}
+body.dark-mode .btn-theme-toggle {
+    background-color: #222a3d;
+    border: 1px solid #2b394f;
+}
+body.dark-mode .bolaa {
+    background-color: #e0e0e0;
+}
+body.dark-mode .success {
+    color: #5cb85c;
+    background-color: rgba(92, 184, 92, 0.1);
+    border-color: rgba(92, 184, 92, 0.2);
+}
+body.dark-mode .error {
+    color: #d9534f;
+    background-color: rgba(217, 83, 79, 0.1);
+    border-color: rgba(217, 83, 79, 0.2);
+}

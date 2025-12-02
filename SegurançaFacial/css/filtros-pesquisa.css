@@ -1,0 +1,161 @@
+.search-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+.search-box-stylized {
+    flex-grow: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef0f5;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-box-stylized:focus-within {
+    box-shadow: 0 4px 20px rgba(108, 99, 255, 0.15);
+    border-color: #a096f5;
+}
+
+
+
+
+.search-icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #a096f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+
+
+.search-input {
+    border: none;
+    background: transparent;
+    height: 40px;
+    width: 100%;
+    padding-left: 15px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #a096f5;
+    opacity: 0.7;
+}
+
+
+
+
+.filter-box-stylized {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 0 20px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef0f5;
+}
+
+.filter-select {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #555;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-pill {
+    height: 52px;
+    padding: 0 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-pill:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #dadce0;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f3f4;
+}
+
+.input-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+
+
+body.dark-mode .search-box-stylized,
+body.dark-mode .filter-box-stylized {
+    background-color: #16213e;
+    border: 1px solid #2b394f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .search-input {
+    color: #e0e0e0;
+}
+
+body.dark-mode .filter-select {
+    color: #e0e0e0;
+}
+
+body.dark-mode .filter-select option {
+    background-color: #16213e;
+}
+
+body.dark-mode .search-icon-circle {
+    background-color: #3e64ff;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #222a3d;
+    color: #e0e0e0;
+    border: 1px solid #2b394f;
+}

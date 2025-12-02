@@ -1,0 +1,127 @@
+table { 
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 0; 
+    margin-top: 25px; 
+    border: 1px solid #dadce0; 
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+table th, table td { 
+    padding: 12px 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #dadce0; 
+}
+
+table th { 
+    background-color: #f8f9fa;
+    color: #202124; 
+    font-weight: 500; 
+}
+
+table tr:last-child td { 
+    border-bottom: none; 
+}
+
+table tr:hover { 
+    background-color: #f1f3f4; 
+}
+
+
+
+.btn-edit { 
+    background-color: #f9ab00; 
+    color: #202124; 
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.btn-delete { 
+    background-color: #d93025; 
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+
+
+@media (max-width: 768px) {
+    table thead { 
+        display: none; 
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #dadce0;
+    }
+
+    table td:last-child { 
+        border-bottom: none; 
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left; 
+        font-weight: bold;
+        color: #202124;
+    }
+}
+
+
+
+body.dark-mode table { 
+    border: 1px solid #2b394f; 
+}
+
+body.dark-mode table th, 
+body.dark-mode table td { 
+    border-bottom: 1px solid #2b394f; 
+}
+
+body.dark-mode table th { 
+    background-color: #1a2a4a;
+    color: #e0e0e0; 
+}
+
+body.dark-mode table tr:hover { 
+    background-color: #131d35; 
+}
+
+
+body.dark-mode .btn-edit { 
+    background-color: #f0ad4e; 
+    color: #202124;
+}
+
+body.dark-mode .btn-delete { 
+    background-color: #d9534f; 
+    color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+    body.dark-mode table tr {
+        border: 1px solid #2b394f;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    body.dark-mode table td {
+        border-bottom: 1px solid #2b394f;
+    }
+
+    body.dark-mode table td::before {
+        color: #e0e0e0;
+    }
+}

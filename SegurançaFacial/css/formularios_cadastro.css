@@ -1,0 +1,138 @@
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form h1, form h2 {
+    color: #202124;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+
+form {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #3c4043;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #202124;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    background-color: #ffffff;
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+input::placeholder {
+    color: #9aa0a6;
+}
+
+.btn-theme-toggle {
+    top: 0px !important;
+}
+
+
+
+button, .btn-action {
+    width: 100%;
+    margin-top: 35px;
+    padding: 14px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+button:hover, .btn-action:hover {
+    background-color: #1557b0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+
+body.dark-mode form {
+    background-color: #16213e;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #2b394f;
+}
+
+body.dark-mode form h1,
+body.dark-mode form h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode form label {
+    color: #c0c0c0;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="date"],
+body.dark-mode select {
+    background-color: #1a2a4a;
+    border: 1px solid #2b394f;
+    color: #e0e0e0;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+    background-color: #131d35;
+    border-color: #3e64ff;
+}
+
+body.dark-mode button,
+body.dark-mode .btn-action {
+    background-color: #3e64ff;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn-action:hover {
+    background-color: #2b4ccb;
+}

@@ -1,0 +1,78 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; 
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dadce0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-icon {
+    width: 60px;  
+    height: 60px;
+    object-fit: contain;
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    color: #555;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.dashboard-card .numero {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #202124;
+    display: block;
+}
+
+.card-link {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 500;
+    border-top: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+.card-link:hover {
+    background-color: #e8f0fe;
+}
+
+
+body.dark-mode .dashboard-card {
+    background-color: #16213e;
+    border: 1px solid #2b394f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+body.dark-mode .dashboard-card .numero {
+    color: #e0e0e0;
+}
+body.dark-mode .dashboard-card h3 {
+    color: #c0c0c0;
+}
+body.dark-mode .card-link {
+    background-color: #1a2a4a;
+    border-top: 1px solid #2b394f;
+    color: #3e64ff;
+}
+body.dark-mode .card-link:hover {
+    background-color: #0f3460;
+}

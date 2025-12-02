@@ -1,0 +1,20 @@
+.aluno-group { 
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #dadce0;
+}
+.aluno-group h3 { 
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #202124;
+}
+
+body.dark-mode .aluno-group { 
+    background-color: #16213e;
+    border: 1px solid #2b394f;
+}
+body.dark-mode .aluno-group h3 { 
+    color: #e0e0e0;
+}

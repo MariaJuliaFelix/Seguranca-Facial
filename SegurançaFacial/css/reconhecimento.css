@@ -1,0 +1,115 @@
+.video-container { 
+    margin: 20px auto; 
+    position: relative; 
+    width: fit-content; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#video { 
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    display: block; 
+    background-color: #000; 
+}
+
+#capture-controls { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin: 25px auto; 
+    max-width: 700px; 
+}
+
+.capture-box { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 120px; 
+}
+
+.capture-btn { 
+    background-color: #3c4043;
+    color: #f0f2f5;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.capture-btn[style*="background-color: rgb(40, 167, 69)"] { 
+    background-color: #1e8e3e !important;
+    color: #fff !important; 
+}
+
+.preview-img { 
+    width: 100%; 
+    height: 75px; 
+    border: 1px solid #dadce0;
+    background-color: #fdfdfd;
+    border-radius: 8px; 
+    display: none; 
+    object-fit: cover; 
+}
+
+.preview-img.visible { 
+    display: block; 
+}
+
+#resultado { 
+    background-color: #ffffff;
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; 
+    border: 1px solid #dadce0;
+}
+
+#resultado p { 
+    margin: 10px 0; 
+}
+
+#resultado ul { 
+    list-style-type: disc; 
+    padding-left: 25px; 
+    margin: 15px 0; 
+}
+
+#resultado ul li { 
+    margin-bottom: 5px; 
+}
+
+.video-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+body.dark-mode .video-container { 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .capture-btn { 
+    background-color: #c0c0c0;
+    color: #1a1a2e;
+}
+
+body.dark-mode .capture-btn[style*="background-color: rgb(40, 167, 69)"] { 
+    background-color: #5cb85c !important; 
+}
+
+body.dark-mode .preview-img { 
+    border: 1px solid #2b394f;
+    background-color: #222a3d;
+}
+
+body.dark-mode #resultado { 
+    background-color: #16213e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2b394f;
+}

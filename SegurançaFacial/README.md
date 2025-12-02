@@ -1,0 +1,46 @@
+# Segurança Facial
+
+**Segurança Facial** é um projeto de TCC desenvolvido para modernizar e aumentar a segurança no controle de saída de alunos em escolas. O sistema integra um painel web de gestão com um microsserviço de Inteligência Artificial, utilizando reconhecimento facial para garantir que apenas responsáveis autorizados possam retirar as crianças.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- 💻 **Frontend**: HTML, CSS, JavaScript
+- 🐘 **Backend**: PHP, MySQL (Banco de Dados Relacional)
+- 🧠 **Inteligência Artificial**: Python, com as bibliotecas:
+  - **Flask**: Para comunicação via API entre o site e a IA
+  - **Face_recognition & Dlib**: Para detecção e reconhecimento facial de alta precisão
+  - **OpenCV & NumPy**: Para processamento de imagens
+
+---
+
+## 🔍 Funcionalidades
+
+- **Gestão Completa**: Cadastro de alunos, turmas e responsáveis com upload de múltiplas fotos para treino da IA.
+- **Reconhecimento em Tempo Real**: Validação facial via webcam para liberar a saída do aluno.
+- **Interface Moderna**: Design responsivo com suporte nativo a Modo Claro e Modo Escuro.
+- **Histórico de Segurança**: Registro automático e auditável de quem retirou cada aluno, com data e hora.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+Oferecer uma solução tecnológica acessível para instituições de ensino, substituindo controles manuais ou crachás físicos por uma validação biométrica, eliminando fraudes e garantindo a tranquilidade dos pais e a segurança dos alunos.
+
+---
+
+## 👨‍💻 Desenvolvido por
+
+Projeto realizado por:
+- **Vinicius Donato**
+- **Lucas Miliozzi**
+- **Maria Julia Felix**
+
+*Desenvolvido como Trabalho de Conclusão de Curso (TCC) para o curso técnico em Desenvolvimento de Sistemas.*
+
+---
+
+## 📌 Observações
+
+Este projeto utiliza uma arquitetura híbrida (PHP + Python). Para rodar localmente, é necessário configurar o servidor XAMPP (Apache/MySQL) e instalar as dependências do Python (`requirements.txt`) incluindo as ferramentas de compilação C++ para a biblioteca Dlib.
