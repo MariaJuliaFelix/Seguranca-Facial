@@ -139,13 +139,13 @@ pip install -r requirements.txt
 
 ---------------------------------------------------
 
-# Contribuições e Melhorias Futuras
+## Contribuições e Melhorias Futuras
 
 Este projeto foi desenvolvido como TCC, mas possui grande potencial de evolução.
 Sinta-se à vontade para contribuir, sugerir melhorias ou abrir issues com novas ideias.
 Toda colaboração é bem-vinda!
 
-# Agradecimentos
+## Agradecimentos
 
 Agradecemos aos meus colegas de grupos por toda dedicaçã que tivemos com o projeto.
 Este trabalho representa não apenas uma solução tecnológica, mas também um passo importante rumo a escolas mais seguras e preparadas para o futuro.
